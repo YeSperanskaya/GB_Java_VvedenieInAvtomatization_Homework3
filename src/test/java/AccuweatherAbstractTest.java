@@ -1,5 +1,8 @@
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,6 +17,8 @@ public abstract class AccuweatherAbstractTest {
     private static String baseUrl;
 
     @BeforeAll
+    @DisplayName("Инициализация теста")
+    @Severity(SeverityLevel.BLOCKER)
     static void initTest() throws IOException {
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
         configFile = new FileInputStream("src/test/resources/for_homework_03.properties");
