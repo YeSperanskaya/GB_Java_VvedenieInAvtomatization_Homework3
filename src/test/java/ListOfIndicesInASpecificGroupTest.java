@@ -1,5 +1,6 @@
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import static io.restassured.RestAssured.given;
 public class ListOfIndicesInASpecificGroupTest extends AccuweatherAbstractTest{
 
     @Test
+    @DisplayName("Получение списка индексов в определённой группе")
     void getListOfIndicesInASpecificGroup() {
 
         List<MetaData> response = given()

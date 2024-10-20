@@ -1,5 +1,6 @@
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import static io.restassured.RestAssured.given;
 public class CityNeighborsByLocationKeyTest extends AccuweatherAbstractTest{
 
     @Test
+    @DisplayName("Получение списка соседей города по ключу местоположения")
     void getCityNeighborsByLocationKey() {
         List<Location> response = given()
                 .queryParam("apikey", getApiKey())

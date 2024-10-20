@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -6,6 +7,7 @@ import static io.restassured.RestAssured.given;
 public class SearchByLocationKeyTest extends AccuweatherAbstractTest {
 
     @Test
+    @DisplayName("Поиск местоположения по ключу")
     void getSearchByLocationKey() {
 
         Location location = given()

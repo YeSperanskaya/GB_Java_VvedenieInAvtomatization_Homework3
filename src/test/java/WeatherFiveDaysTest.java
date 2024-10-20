@@ -1,5 +1,6 @@
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -7,6 +8,7 @@ import static io.restassured.RestAssured.given;
 public class WeatherFiveDaysTest extends AccuweatherAbstractTest{
 
     @Test
+    @DisplayName("Получение прогноза погоды на 5 дней для местоположения с ключом 291662")
     void getWeatherFiveDays(){
         Weather weather = given()
                 .queryParam("apikey", getApiKey())

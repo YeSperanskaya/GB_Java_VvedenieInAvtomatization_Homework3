@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -8,6 +9,7 @@ import static io.restassured.RestAssured.given;
 public class GetLocationTest extends AccuweatherAbstractTest {
 
     @Test
+    @DisplayName("Проверка получения списка локаций по запросу „Барнаул“")
     void getGetLocation() {
 
         List<Location> result = given()

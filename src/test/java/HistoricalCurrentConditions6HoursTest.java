@@ -1,5 +1,6 @@
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import static io.restassured.RestAssured.given;
@@ -7,6 +8,7 @@ import static io.restassured.RestAssured.given;
 public class HistoricalCurrentConditions6HoursTest extends AccuweatherAbstractTest {
 
     @Test
+    @DisplayName("Получение исторических данных о погоде за последние 6 часов")
     void getHistoricalCurrentConditions6Hours() {
 
         List<Historical> response = given()
